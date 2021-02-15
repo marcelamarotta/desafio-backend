@@ -10,14 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_15_014514) do
+ActiveRecord::Schema.define(version: 2021_02_14_195327) do
 
   create_table "congressmen", force: :cascade do |t|
     t.string "name"
     t.string "uf"
+    t.string "id_cadastro"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "total"
   end
 
   create_table "expenses", force: :cascade do |t|

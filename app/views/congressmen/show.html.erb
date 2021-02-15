@@ -1,2 +1,26 @@
 <h2> <%= @congressman.name %> </h2>
 <h2> <%= @congressman[:total] %> </h2>
+<%= image_tag "https://www.camara.leg.br/internet/deputado/bandep/pagina_do_deputado/#{@congressman.id_cadastro.to_i}.jpg",
+    width: 300 %>
+
+<table>
+  <thead>
+    <tr>
+      <th>Data</th>
+      <th>Estabelecimento</th>
+      <th>Valor</th>
+      <th>Link</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @expenses.each do |expense| %>
+      <tr>
+        <td><%= expense[:date] %></td>
+        <td><%= expense[:provider] %></td>
+        <td><%= expense[:amount] %></td>
+        <td><%= link_to "URL", expense[:url], target: :_blank %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

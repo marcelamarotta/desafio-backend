@@ -10,7 +10,7 @@
     <% @congressmen.each do |congressman| %>
       <tr>
         <td><%= link_to "#{congressman.name}", congressman %></td>
-        <td><%= congressman[:total] %>
+        <td><%= @congressmen_expenses.find {|total_expense| total_expense[:congressman_id] == congressman.id }[:total] %>
         </td>
       </tr>
     <% end %>

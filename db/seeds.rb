@@ -8,6 +8,7 @@ lala = 0
 CSV.foreach(filepath, csv_options) do |row|
   if row['sgUF'] == uf
     data = { uf: uf,
+             id_cadastro: row['ideCadastro'],
              name: row['txNomeParlamentar'],
              date: row['datEmissao'],
              provider: row['txtFornecedor'],
@@ -30,6 +31,7 @@ csv_data.each do |data|
     id += 1
     congressman = { id: id,
                     uf: uf,
+                    id_cadastro: data[:id_cadastro],
                     name: data[:name],
                     created_at: Time.now.utc,
                     updated_at: Time.now.utc
