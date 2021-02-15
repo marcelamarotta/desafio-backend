@@ -1,0 +1,18 @@
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Gasto total</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @congressmen.each do |congressman| %>
+      <tr>
+        <td><%= link_to "#{congressman.name}", congressman %></td>
+        <td><%= congressman[:total] %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
