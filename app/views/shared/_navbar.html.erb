@@ -3,8 +3,8 @@
     <li class="nav-item <%= "active" if controller_name == "pages" %>">
       <%= link_to "Home", root_path, class: "nav-link" %>
     </li>
-    <%# <li class="nav-item <%= "active" if controller_name == "congressmen" && action_name == "index" %>
-      <%# <%= link_to "Lista de deputados", congressmen_path, class: "nav-link" %>
-    <%# </li> %>
+    <li class="nav-item <%= "active" if controller_name == "congressmen" && action_name == "index" %>" >
+      <%= link_to "Lista de deputados", congressmen_path, class: "nav-link" %>
+    </li>
   </ul>
 </div>
